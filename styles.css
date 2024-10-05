@@ -1,0 +1,205 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contentPadding
+{
+    padding: 15px;
+}
+
+header
+{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #507299;
+    padding: 10px 10px 10px 220px;
+    z-index: 100;
+}
+
+main
+{
+    flex-grow: 1;
+    background-color: #edeef0;
+    display: grid;
+    grid-template-columns: 400px 265px 490px 1fr;
+}
+
+footer
+{
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: #808080;
+}
+
+.navigation
+{
+    grid-column: 2;
+    padding: 20px 20px 0px 50px;
+}
+
+.navigation ul
+{
+    list-style-type: none;
+}
+
+.navigation > ul > li
+{
+    margin-bottom: 20px;
+}
+
+.navigation > ul > li:hover
+{
+    background-color: #5072991a;
+}
+
+.content
+{
+    color: black;
+    font-size: 17px;
+    grid-column: 3;
+}
+
+a
+{
+    text-decoration: none;
+    color: #507299;
+}
+
+::selection
+{
+    background-color: #d0d0d0;
+    color: green;
+}
+
+.importantInfo
+{
+    position: fixed;
+    right: 410px; 
+    width: 205px; 
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    top: 60px; 
+}
+
+.infoBox
+{
+    background-color: white;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.postContent > img
+{
+    display: block;
+    width: 100%;
+}
+
+.postContent
+{
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+.bottomBox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: lightblue;
+}
+
+.grayP
+{
+    background-color: #e8e8e8; 
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.postHeader
+{
+    background-color: white; 
+}
+
+.importantInfo .infoBox
+{
+    background-color: white; 
+}
+
+.importantInfo .grayP
+{
+    background-color: #e8e8e8; 
+    margin: 0; 
+    padding: 1px;
+    margin-bottom: 5px;
+}
+
+.importantInfo .postHeader
+{
+    background-color: white;
+}
+
+.bottomBox button
+{
+    background: none;
+    border: none;
+    color: #507299;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+
+@media (max-width: 1520px)
+{
+    .importantInfo
+    {
+        display: none;
+    }
+
+    main
+    {
+        grid-template-columns: 265px 490px 1fr;
+    }
+
+    .content
+    {
+        grid-column: 2;
+    }
+
+    .navigation
+    {
+        grid-column: 1;
+    }
+}
+
+@media(max-width: 800px)
+{
+    main
+    {
+        display: block;
+    }
+
+    .navigation > ul > li
+    {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+
