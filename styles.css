@@ -15,7 +15,7 @@ body
 
 .contentPadding
 {
-    padding: 15px;
+    padding: 10px;
 }
 
 header
@@ -87,12 +87,10 @@ a
 .importantInfo
 {
     position: fixed;
-    right: 410px; 
-    width: 205px; 
+    right: 450px; 
+    width: 195px; 
     display: flex;
     flex-direction: column;
-    z-index: 99;
-    top: 60px; 
 }
 
 .infoBox
@@ -123,34 +121,16 @@ a
     color: lightblue;
 }
 
-.grayP
-{
-    background-color: #e8e8e8; 
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
 .postHeader
 {
-    background-color: white; 
-}
-
-.importantInfo .infoBox
-{
-    background-color: white; 
-}
-
-.importantInfo .grayP
-{
-    background-color: #e8e8e8; 
-    margin: 0; 
-    padding: 1px;
-    margin-bottom: 5px;
-}
-
-.importantInfo .postHeader
-{
     background-color: white;
+    z-index: 1;
+}
+
+.grayP
+{
+    background-color: #e8e8e8;
+    margin-bottom: 10px;
 }
 
 .bottomBox button
@@ -163,14 +143,15 @@ a
     padding: 0;
 }
 
-
-@media (max-width: 1520px)
+hr
 {
-    .importantInfo
-    {
-        display: none;
-    }
+    border: 0;
+    border-top: 2px solid #d0d0d0;
+    margin-top: 10px;
+}
 
+@media (max-width: 1800px)
+{
     main
     {
         grid-template-columns: 265px 490px 1fr;
@@ -185,9 +166,14 @@ a
     {
         grid-column: 1;
     }
+
+    .importantInfo
+    {
+        display: none;
+    }
 }
 
-@media(max-width: 800px)
+@media(max-width: 768px)
 {
     main
     {
@@ -200,6 +186,3 @@ a
         margin-right: 10px;
     }
 }
-
-
-
